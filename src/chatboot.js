@@ -25,7 +25,7 @@ const Chatbot = () => {
     if (sessionId) {
       const fetchChatHistory = async () => {
         try {
-          const response = await axios.get('https://chatbotbackend-2-p6w5.onrender.com/api/chatHistory', {
+          const response = await axios.get('https://chatbotbackend-vd8a.onrender.com/api/chatHistory', {
             params: { sessionId: sessionId }, // Pass session ID to identify the user
           });
           setMessages(response.data.history); // Set chat history
@@ -55,7 +55,7 @@ const Chatbot = () => {
     setLoading(true);
 
     try {
-      const response = await axios.post('https://chatbotbackend-2-p6w5.onrender.com/api/chat', {
+      const response = await axios.post('https://chatbotbackend-vd8a.onrender.com/chat', {
         message: input,
         sessionId: sessionId, // Include session ID in the request
       });
